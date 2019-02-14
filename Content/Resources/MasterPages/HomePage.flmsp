@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+    </head>
+    <body>
+        <div>
+            <MadCap:bodyProxy />
+            <div class="footer center">
+                <div class="home-footer">
+                    <div>
+                        <p class="footer-logo"><a href="http://www.madcapsoftware.com/"><img src="../Images/Home/PlaceholderLogo-white.png" alttext="" class="Hyperlinked footer-logo" /> </a>
+                        </p>
+                    </div>
+                    <div class="footer-icons"><a href="[%=General.Twitter%]" target="_blank"><img src="../Images/Home/Twitter-Icon-White_40x40.png" alttext="" class="Hyperlinked" style="width: 40px;height: 40px;" /></a><a href="[%=General.Facebook%]http://www.facebook.com/madcapdocteam" target="_blank"><img src="../Images/Home/Facebook-Icon-White.png" alttext="" class="Hyperlinked" /></a>
+                    </div>
+                </div>
+                <div class="outer-row">
+                    <p class="footer-sub">Created Using MadCap&#160;Flare</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

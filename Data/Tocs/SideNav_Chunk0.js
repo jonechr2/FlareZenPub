@@ -1,0 +1,1 @@
+define({'/Content/Article_Template.htm':{i:[0,1],t:['Article Heading','Article Heading'],b:['','']},'/Content/Herschel_Template_Reference_Document.pdf':{i:[3],t:['Herschel Template Reference Document'],b:['']},'/Content/Release_Notes.htm':{i:[2,5],t:['Release Notes','Release Notes'],b:['','']},'/Content/System_Requirements.htm':{i:[4],t:['System Requirements'],b:['']}});
