@@ -1,0 +1,1 @@
+define({'My Term':{d:'My definition',l:''},'super':{d:'This is super.',l:''}});

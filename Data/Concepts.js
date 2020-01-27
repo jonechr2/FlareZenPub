@@ -1,1 +1,1 @@
-define({});
+define({'Release Notes':[1],});

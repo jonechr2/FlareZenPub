@@ -1,0 +1,29 @@
+﻿/*<meta />*/
+
+h1
+{
+	color: #02111b;
+	font-family: 'Source Sans Pro';
+	font-size: 16pt;
+}
+h1.title{
+font-size: 24pt;
+text-align: center;
+}
+p{
+font-size: 10pt;
+hyphens: none;
+}
+div.left
+{
+	border-right: solid 5px #5d737e;
+	border-radius: 5px;
+	width: 2.5in;
+	float: left;
+	height: 9in;
+}
+
+div.left-block
+{
+height: 2.1in;	
+}

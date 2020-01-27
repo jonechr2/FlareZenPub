@@ -40,6 +40,11 @@ input[type="search"]
 	display: none;
 }
 
+.search-field::-ms-clear
+{
+	display: none;
+}
+
 .search-bar .search-filter
 {
 	float: left;
@@ -141,6 +146,23 @@ input[type="search"]
 ul.menu.mc-component
 {
 	overflow-y: auto;
+	color: #000000;
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1em;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 300px;
+	height: auto;
+	max-height: 100%;
+	background-color: #ffffff;
 }
 
 ul.menu a
@@ -201,7 +223,7 @@ ul.menu li > a.selected
 	line-height: 1.1em;
 }
 
-#resultList li
+#resultList > li
 {
 	list-style: none;
 	margin-bottom: 16px;
@@ -242,6 +264,40 @@ ul.menu li > a.selected
 	text-decoration: none;
 }
 
+._Skins_SearchResults.mc-component #resultList .glossary .term a:visited
+{
+	
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:visited
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:visited
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:focus
+{
+	
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:focus
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:focus
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
 #communityResultList a:hover
 {
 	text-decoration: underline;
@@ -250,6 +306,70 @@ ul.menu li > a.selected
 #pagination a:hover
 {
 	border-top: solid 1px #e2e2e6;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:hover
+{
+	
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:hover
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #pagination a:hover
+{
+	border-top: solid 1px #e2e2e6;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:hover
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+ul.menu.mc-component li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul ul ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:active
+{
+	
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:active
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:active
+{
+	color: #2200c1;
+	text-decoration: underline;
 }
 
 #resultList.communitySearch .title
@@ -319,6 +439,80 @@ a.activityText:visited
 {
 	font-weight: bold;
 	border-top: solid 1px #e2e2e6;
+}
+
+.micro-content-container > .micro-content
+{
+	padding: 15px;
+	margin-bottom: 25px;
+	-webkit-box-shadow: 0px 1px 4px 0px #cccccc;
+	-moz-box-shadow: 0px 1px 4px 0px #cccccc;
+	box-shadow: 0px 1px 4px 0px #cccccc;
+	line-height: normal;
+	overflow-y: auto;
+}
+
+.micro-content-container > .micro-content > .micro-response
+{
+	overflow: hidden;
+	max-height: 200px;
+}
+
+.micro-content-container > .micro-content > .micro-content-expand
+{
+	height: 40px;
+	background: #ffffff url('../Images/arrow-down.png') no-repeat center center;
+	border-top: solid 1px #b9bec1;
+	border-bottom: solid 1px #b9bec1;
+	cursor: pointer;
+}
+
+.micro-content-container > .micro-content > .micro-content-expand.expanded
+{
+	background: #ffffff url('../Images/arrow-up.png') no-repeat center center;
+}
+
+.micro-content-container > .micro-content > .micro-content-expand-transition-wrapper
+{
+	position: relative;
+	height: 0px;
+	width: 100%;
+}
+
+.micro-content-container > .micro-content > .micro-content-expand-transition-wrapper > .micro-content-expand-transition
+{
+	position: absolute;
+	bottom: 0px;
+	height: 50px;
+	left: 0;
+	right: 0;
+	background: -moz-linear-gradient(top, transparent 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+	background: -o-linear-gradient(top, transparent 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, transparent 0%,#ffffff 100%);
+	background: linear-gradient(top, transparent 0%,#ffffff 100%);
+	-pie-background: linear-gradient(transparent, #ffffff);
+}
+
+.micro-content-container > .micro-content > .micro-response-title
+{
+	font-size: 16px;
+	font-weight: normal;
+	margin: 10px 0 2px 0;
+}
+
+.micro-content-container > .micro-content > .micro-response-title a
+{
+	color: #0185D1;
+	text-decoration: underline;
+}
+
+.micro-content-container > .micro-content > .micro-response-url cite
+{
+	color: #0E774A;
+	font-size: 0.8em;
+	font-style: normal;
 }
 
 .buttons._Skins_Toolbar.mc-component
@@ -622,5 +816,233 @@ a.activityText:visited
 	color: #e1e1e1;
 	background-color: #e1e1e1;
 	height: 24px;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .definition
+{
+	
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary
+{
+	margin-bottom: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-position: center center;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term
+{
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a
+{
+	
+}
+
+._Skins_SearchResults.mc-component h1#results-heading
+{
+	color: #f08080;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-style: normal;
+}
+
+._Skins_SearchResults.mc-component #results-heading
+{
+	border-bottom: solid 1px #ebebeb;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response
+{
+	max-height: 200px;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-content-expand.expanded
+{
+	background: transparent url('Images/arrow-up.png') no-repeat center center;
+	-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/arrow-up.png') no-repeat center center;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-content-expand
+{
+	border-top: solid 1px #b9bec1;
+	border-bottom: solid 1px #b9bec1;
+	height: 40px;
+	background: transparent url('Images/arrow-down.png') no-repeat center center;
+	-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/arrow-down.png') no-repeat center center;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-content-expand-transition-wrapper > .micro-content-expand-transition
+{
+	height: 50px;
+	background: -moz-linear-gradient(top, transparent 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+	background: -o-linear-gradient(top, transparent 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, transparent 0%,#ffffff 100%);
+	background: linear-gradient(top, transparent 0%,#ffffff 100%);
+	-pie-background: linear-gradient(transparent, #ffffff);
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title
+{
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-url cite
+{
+	color: #0e774a;
+	font-size: 0.9em;
+	font-style: normal;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content
+{
+	margin-bottom: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-position: center center;
+}
+
+._Skins_SearchResults.mc-component #pagination
+{
+	height: 40px;
+	line-height: ;
+}
+
+._Skins_SearchResults.mc-component #pagination a
+{
+	border-top: solid 1px #fafafc;
+	color: #0185D1;
+	font-size: 1em;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+
+._Skins_SearchResults.mc-component #pagination a#selected
+{
+	font-weight: bold;
+	border-top: solid 1px #e2e2e6;
+}
+
+._Skins_SearchResults.mc-component #resultList .description
+{
+	font-size: 13px;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a
+{
+	color: #0185D1;
+	font-size: 1em;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title
+{
+	margin-bottom: 2px;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList .url cite
+{
+	color: #0e774a;
+	font-size: 13px;
+	font-style: normal;
+}
+
+._Skins_SearchResults.mc-component #resultList
+{
+	line-height: 1em;
+	text-align: left;
+	display: block;
+}
+
+._Skins_SearchResults.mc-component .phrase-suggest
+{
+	font-style: italic;
+}
+
+._Skins_SearchResults.mc-component .phrase-suggest a
+{
+	color: #2200C1;
+}
+
+ul.menu.mc-component a
+{
+	color: #000000;
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul.menu.mc-component li > a
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: transparent;
+}
+
+ul.menu.mc-component ul > li > a
+{
+	padding-left: 20px;
+	background-color: transparent;
+}
+
+ul.menu.mc-component ul ul > li > a
+{
+	padding-left: 40px;
+	background-color: transparent;
+}
+
+ul.menu.mc-component ul ul ul > li > a
+{
+	padding-left: 60px;
+	background-color: transparent;
+}
+
+ul.menu.mc-component ul ul ul ul > li > a
+{
+	padding-left: 80px;
+	background-color: transparent;
+}
+
+ul.menu.mc-component li > a.selected
+{
+	font-weight: bold;
+	background-color: transparent;
+}
+
+ul.menu.mc-component li > a.selected:hover
+{
+	font-weight: bold;
+	background-color: #cacaca;
 }
 

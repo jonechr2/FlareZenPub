@@ -21,6 +21,18 @@
                     <p class="footer-sub">Created Using MadCap&#160;Flare</p>
                 </div>
             </div>
+            <p>&#160;</p>
+            <div class="home-tiles">
+                <div>
+                    <p>Cell 1</p>
+                </div>
+                <div>
+                    <p>Cell 2</p>
+                </div>
+                <div>
+                    <p>Cell 3</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

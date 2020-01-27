@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Side_Navigation_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>jQuery maphilight documentation</title>
+        <meta http-equiv="Cache-control" content="no-cache" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../../Stylesheets/myStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>body
+{
+	width: 80%;
+	margin: 0 auto;
+	line-height: 1.5em;
+}
+
+body,
+h1,
+h2
+{
+	font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+}
+
+h1
+{
+	margin: 1em 0 1.5em;
+	font-size: 18px;
+}
+
+h2
+{
+	margin: 2em 0 1.5em;
+	font-size: 16px;
+}
+
+h3
+{
+	background: #596380;
+	color: #fff;
+	margin-bottom: 0.3em;
+	padding: 0.5em 0 0.5em 1em;
+}
+
+p
+{
+	margin: 0;
+}
+
+pre,
+pre + p,
+p + p
+{
+	margin: 1ex 0 0;
+}
+
+pre
+{
+	background-color: #ddd;
+	border: 1px solid #ccc;
+	color: #000;
+	line-height: 1.1em;
+	overflow: auto;
+	padding: 5px;
+}
+
+code
+{
+	font-family: "Courier New", Courier, monospace;
+}
+
+.ui-tabs-nav li
+{
+	border: 1px solid #97A5B0;
+	border-bottom: none;
+	background: #ddecf5;
+}
+
+li.ui-tabs-selected
+{
+	border: 2px solid #97A5B0;
+	border-bottom: none;
+	background: #fff;
+}
+
+.options dt,
+.methods dt
+{
+	background: #CFD4E6;
+}
+
+</style>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <script src="ui.tabs.pack.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                            </button>
+                                            <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                            </button>
+                                            <div class="button-separator">
+                                            </div>
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h1>jQuery maphilight documentation</h1>
+                                    <p>maphilight applies to images with a 'usemap' attribute, and outlines the areas defined in their map on mouseover.</p>
+                                    <p>It provides a single jQuery function: <code>$('.foo').maphilight()</code></p>
+                                    <p>This would hilight every image with a map on the page: <code>$('img[usemap]').maphilight()</code></p>
+                                    <h2 data-mc-xref-target-name="Demos"><a name="Demos" data-mc-generated-bookmark="ListOf"></a>Demos</h2>
+                                    <p><a href="demo_simple.html">The simple demo</a> (with awful art, and examples of data attributes)</p>
+                                    <p><a href="demo_world.html">A map of the world</a>
+                                    </p>
+                                    <p><a href="demo_usa.html">A map of the USA</a>
+                                    </p>
+                                    <p><a href="demo_features.html">A few feature-demonstrations</a>
+                                    </p>
+                                    <h2 data-mc-xref-target-name="Plugin_methods"><a name="Plugin_methods" data-mc-generated-bookmark="ListOf"></a>Plugin methods</h2>
+                                    <dl class="methods">
+                                        <dt><a href="#maphilight"><code>maphilight( [options] )</code>: returns jQuery</a>
+                                        </dt>
+                                        <dd>Add hilight behavior to an imagemap</dd>
+                                        <dt><a href="#defaults"><code>$.maphilight.defaults</code></a>
+                                        </dt>
+                                        <dd>Default settings for all maphilight calls</dd>
+                                    </dl>
+                                    <div><a name="maphilight"></a>
+                                        <h3><code>maphilight( [options] )</code>
+                                        </h3>
+                                        <ul class="tabs">
+                                            <li value="1"><a href="#overview">Overview</a>
+                                            </li>
+                                            <li value="2"><a href="#options">Options</a>
+                                            </li>
+                                        </ul>
+                                        <div id="overview">
+                                            <p>The method that adds hilight behavior to an imagemap.</p>
+                                            <h4>Arguments:</h4>
+                                            <dl>
+                                                <dt><code>options</code> (optional)</dt>
+                                                <dd>
+                                                    <p>A set of key/value pairs that configures the map.  All options are optional.</p>
+                                                    <p>All options can be overridden with the jQuery <code>data</code> method, per-<code>img</code> and per-<code>area</code>.</p>
+                                                    <p>The <a href="http://docs.jquery.com/Plugins/Metadata">metadata plugin</a> is also supported.</p>
+                                                    <p>Order of inheritance:
+						<ol><li value="1"><code>$(area).data('maphilight')</code></li><li value="2"><code>$(area).metadata()</code></li><li value="3"><code>$(img).data('maphilight')</code></li><li value="4"><code>$(img).metadata()</code></li><li value="5"><code>$(img).maphilight(options)</code></li></ol></p>
+                                                    <p>Example: to make one particular hilight green:</p><pre><code>&lt;area ... class="{fillColor:'00ff00'}"&gt;</code></pre>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div id="options">
+                                            <h4>Options:</h4>
+                                            <dl class="options">
+                                                <dt><code>fill</code> (Boolean. Default: true)</dt>
+                                                <dd>Whether to fill the shape</dd>
+                                                <dt><code>fillColor</code> (String. Default: '000000')</dt>
+                                                <dd>The color to fill the shape with</dd>
+                                                <dt><code>fillOpacity</code> (Number. Default: 0.2)</dt>
+                                                <dd>The opacity of the fill (0 = fully transparent, 1 = fully opaque)</dd>
+                                                <dt><code>stroke</code> (Boolean. Default: true)</dt>
+                                                <dd>Whether to outline the shape</dd>
+                                                <dt><code>strokeColor</code> (String. Default: 'ff0000')</dt>
+                                                <dd>The color of the outline</dd>
+                                                <dt><code>strokeOpacity</code> (Number. Default: 1)</dt>
+                                                <dd>The opacity of the outline (0 = fully transparent, 1 = fully opaque)</dd>
+                                                <dt><code>strokeWidth</code> (Number. Default: 1)</dt>
+                                                <dd>The thickness of the outline</dd>
+                                                <dt><code>fade</code> (Boolean. Default: true)</dt>
+                                                <dd>Whether to fade in the shapes on mouseover</dd>
+                                                <dt><code>alwaysOn</code> (Boolean. Default: false)</dt>
+                                                <dd>Whether to always show the hilighted areas</dd>
+                                                <dt><code>neverOn</code> (Boolean. Default: false)</dt>
+                                                <dd>Whether to never show the hilighted areas</dd>
+                                                <dd>(This only makes sense to use as per-area metadata, of course.)</dd>
+                                                <dt><code>groupBy</code> (String. Default: false)</dt>
+                                                <dd>The name of an attribute to group areas by</dd>
+                                                <dd>If this is present then all areas in the map which have the same attribute value as the hovered area will hilight as well</dd>
+                                                <dt><code>wrapClass</code> (String/bool. Default: false)</dt>
+                                                <dd>If true, applies the class on the &lt;img&gt; to the wrapper div maphilight created.</dd>
+                                                <dd>If a string, that string is used as a class on the wrapper div.</dd>
+                                                <dt><code>shadow</code> (Boolean. Default: false)</dt>
+                                                <dd>Whether to apply a shadow to the shape. (Only works with canvas-supporting browsers. So, everything but IE below version 9.)</dd>
+                                                <dt><code>shadowPosition</code> (String. Default: 'outside')</dt>
+                                                <dd>Where to position the shadow. Can be 'outside', 'inside', or 'both'.</dd>
+                                                <dt><code>shadowFrom</code> (String/bool. Default: false)</dt>
+                                                <dd>What to use to cast the shadow. Can be 'stroke' or 'fill'. If false, choose a value based on the shadow position. (Generally it looks better if it's being cast from a fill when it's outside the shape, and from a stroke when it's inside the shape.)</dd>
+                                                <dt><code>shadowX</code> (Number. Default: 0)</dt>
+                                                <dd>Horizontal offset of the shadow from the shape.</dd>
+                                                <dt><code>shadowY</code> (Number. Default: 0)</dt>
+                                                <dd>Vertical offset of the shadow from the shape.</dd>
+                                                <dt><code>shadowRadius</code> (Number. Default: 6)</dt>
+                                                <dd>Size of the shadow.</dd>
+                                                <dt><code>shadowColor</code> (String. Default: '000000')</dt>
+                                                <dd>Color of the shadow.</dd>
+                                                <dt><code>shadowOpacity</code> (Number. Default: 0.8)</dt>
+                                                <dd>Opacity of the shadow.</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div><a name="defaults"></a>
+                                        <h3><code>$.maphilight.defaults</code>
+                                        </h3>
+                                        <p>The defaults for all uses of maphilight can be set here.  If you manually replace this, you <em>have</em> to specify all options.</p><pre><code>$.fn.maphilight.defaults = {
+	fill: true,
+	fillColor: '000000',
+	fillOpacity: 0.2,
+	stroke: true,
+	strokeColor: 'ff0000',
+	strokeOpacity: 1,
+	strokeWidth: 1,
+	fade: true,
+	alwaysOn: false,
+	neverOn: false,
+	groupBy: false,
+	wrapClass: true,
+	shadow: false,
+	shadowX: 0,
+	shadowY: 0,
+	shadowRadius: 6,
+	shadowColor: '000000',
+	shadowOpacity: 0.8,
+	shadowPosition: 'outside',
+	shadowFrom: false
+}</code></pre>
+                                    </div>
+                                    <h2 data-mc-xref-target-name="Changelog"><a name="Changelog" data-mc-generated-bookmark="ListOf"></a>Changelog</h2>
+                                    <ul>
+                                        <li value="1">1.2.2: New options groupBy and wrapClass. Allow .data to override options/metadata. Work around a jQuery bug with Opera.</li>
+                                        <li value="2">1.2.1: Fix a Chrome bug. Apply the class on the img to the wrapper div created by maphilight.</li>
+                                        <li value="3">1.2: Made <code>alwaysOn</code> work per-area with metadata plugin.</li>
+                                        <li value="4">1.1: Added <code>alwaysOn</code> option. Fixed behavior in Firefox2/Safari/Opera.</li>
+                                        <li value="5">1.0: First release.</li>
+                                    </ul>
+                                    <h2 data-mc-xref-target-name="Tested_with"><a name="Tested_with" data-mc-generated-bookmark="ListOf"></a>Tested with</h2>
+                                    <ul>
+                                        <li value="1">Firefox</li>
+                                        <li value="2">IE 6, 7, 8, 9</li>
+                                        <li value="3">Safari 3, 4, 5</li>
+                                        <li value="4">Chrome</li>
+                                        <li value="5">Opera 9, 10</li>
+                                    </ul>
+                                    <h2 data-mc-xref-target-name="Contributors"><a name="Contributors" data-mc-generated-bookmark="ListOf"></a>Contributors</h2>
+	These people have contributed in some way to the project:
+	<ul><li value="1">Billy Earney (@ University of Missouri): fixed alwaysOn for IE</li><li value="2">Travis Balzarini (@ Sonoma County Web Team): fixed IE 8</li><li value="3"><a href="http://stackoverflow.com/users/92414/solutionyogi">SolutionYogi</a>: Also fixed IE 8 :)</li><li value="4"><a href="https://github.com/Raven24">Florian Staudacher</a>: provided the initial version of shadows</li></ul><p><script type="text/javascript" src="../../dropDownCopy.js"></script></p></div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>
