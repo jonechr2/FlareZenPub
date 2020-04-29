@@ -18,34 +18,68 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
         <link href="Resources/Stylesheets/myStyles.css" rel="stylesheet" />
-        <script src="../Resources/Scripts/custom.modernizr.js">
-        </script>
         <script src="../Resources/Scripts/jquery.min.js">
         </script>
-        <script src="../Resources/Scripts/require.min.js">
+        <script src="../Resources/Scripts/require.min.js" defer="defer">
         </script>
-        <script src="../Resources/Scripts/require.config.js">
+        <script src="../Resources/Scripts/require.config.js" defer="defer">
         </script>
-        <script src="../Resources/Scripts/foundation.6.2.3_custom.js">
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
         </script>
-        <script src="../Resources/Scripts/plugins.min.js">
+        <script src="../Resources/Scripts/plugins.min.js" defer="defer">
         </script>
-        <script src="../Resources/Scripts/MadCapAll.js">
+        <script src="../Resources/Scripts/MadCapGlobal.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapDom.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapUtilities.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapXhr.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapTextEffects.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapSlideshow.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapFeedback.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapDefault.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAccessibility.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapHelpSystem.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapToc.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapToc.Breadcrumbs.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapToc.MiniToc.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapToc.SideMenu.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapIndex.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapGlossary.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapParser.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapSearch.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapTopic.js" defer="defer">
         </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
                     <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
                     <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
-                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
                                     </button>
                                 </div>
                             </div>
@@ -62,18 +96,21 @@
                                     <div class="nav-search row">
                                         <form class="search" action="#">
                                             <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
-                                                <div class="search-filter-wrapper">
-                                                    <div class="search-filter">
-                                                        <div class="search-filter-content">
-                                                            <ul>
-                                                                <li>All Files</li>
-                                                            </ul>
-                                                        </div>
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                                 <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Search">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,79 +120,81 @@
                             </div>
                         </nav>
                     </div>
-                    <section class="main-section">
+                    <div class="main-section">
                         <div class="row outer-row sidenav-layout">
-                            <div class="sidenav-wrapper">
+                            <nav class="sidenav-wrapper">
                                 <div class="sidenav-container">
                                     <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
                                     </ul>
                                 </div>
-                            </div>
+                            </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div>
-                                        <div class="topic-hero">
-                                            <h1>Welcome to the <span class="GeneralCompanyName">FictionSoft</span> Knowledge&#160;Base</h1>
-                                        </div>
-                                        <div class="home-layout">
-                                            <div class="home-section">
-                                                <div class="home-tiles">
-                                                    <div class="topic-hero" style="background-position: center center">
-                                                        <p>
-                                                            <img src="Resources/Images/Home/icon-circle1.png" />
-                                                        </p>
-                                                        <p><span class="GeneralCompanyName">FictionSoft</span> Knowledge Base is used for any information related to all released versions of <span class="GeneralCompanyName">FictionSoft</span>.</p>
-                                                    </div>
-                                                    <div>
-                                                        <p><a href="http://forums.madcapsoftware.com/index.php"><img src="Resources/Images/Home/icon-circle2.png" /></a>
-                                                        </p>
-                                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Need help getting your project configured? Contact </a><a href="https://www.madcapsoftware.com/support/contact-options.aspx">MadCap Software Technical&#160;Support</a></span>
-                                                            <div class="MCDropDownBody dropDownBody">
-                                                                <p>Test</p>
+                                        <div role="main" id="mc-main-content">
+                                            <div class="topic-hero">
+                                                <h1>Welcome to the <span class="GeneralCompanyName">FictionSoft</span> Knowledge&#160;Base</h1>
+                                            </div>
+                                            <div class="home-layout">
+                                                <div class="home-section">
+                                                    <div class="home-tiles">
+                                                        <div class="topic-hero" style="background-position: center center">
+                                                            <p>
+                                                                <img src="Resources/Images/Home/icon-circle1.png" />
+                                                            </p>
+                                                            <p><span class="GeneralCompanyName">FictionSoft</span> Knowledge Base is used for any information related to all released versions of <span class="GeneralCompanyName">FictionSoft</span>.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p><a href="http://forums.madcapsoftware.com/index.php"><img src="Resources/Images/Home/icon-circle2.png" /></a>
+                                                            </p>
+                                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Need help getting your project configured? Contact </a><a href="https://www.madcapsoftware.com/support/contact-options.aspx">MadCap Software Technical&#160;Support</a></span>
+                                                                <div class="MCDropDownBody dropDownBody">
+                                                                    <p>Test</p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="home-section">
-                                                <h1>Recent Articles</h1>
-                                                <div class="article-tiles">
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p> <span class="GeneralProduct 1">Product 1</span> System Requirements</p></td></tr></tbody></table></a>
-                                                    </div>
-                                                    <div><a class="home-button" href="Release_Notes.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p> <span class="GeneralProduct 1">Product 1</span> Release notes</p></td></tr></tbody></table> </a>
-                                                    </div>
-                                                    <div><a class="home-button" href="Article_Template.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p>Setup Cancelled During Installation</p></td></tr></tbody></table> </a>
-                                                    </div>
-                                                    <div><a class="home-button" href="Release_Notes.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-3.png" /></td><td><p> <span class="GeneralProduct 3">Product 3</span> Release Notes</p></td></tr></tbody></table></a> </div>
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-3.png" /></td><td><p> <span class="GeneralProduct 3">Product 3</span> System Requirements</p></td></tr></tbody></table> </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="home-section">
-                                                <h1>System Requirements</h1>
-                                                <div class="article-tiles">
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 66px;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p><span class="GeneralProduct 1">Product 1</span></p></td></tr></tbody></table></a>
-                                                    </div>
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 2">Product 2</span></p></td></tr></tbody></table></a>
-                                                    </div>
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 3">Product 3</span></p></td></tr></tbody></table></a>
-                                                    </div>
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p><span class="GeneralProduct 4">Product 4</span> </p></td></tr></tbody></table></a>
-                                                    </div>
-                                                    <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 5">Product 5</span></p></td></tr></tbody></table></a>
+                                                <div class="home-section">
+                                                    <h1>Recent Articles</h1>
+                                                    <div class="article-tiles">
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p> <span class="GeneralProduct 1">Product 1</span> System Requirements</p></td></tr></tbody></table></a>
+                                                        </div>
+                                                        <div><a class="home-button" href="Release_Notes.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p> <span class="GeneralProduct 1">Product 1</span> Release notes</p></td></tr></tbody></table> </a>
+                                                        </div>
+                                                        <div><a class="home-button" href="Article_Template.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p>Setup Cancelled During Installation</p></td></tr></tbody></table> </a>
+                                                        </div>
+                                                        <div><a class="home-button" href="Release_Notes.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-3.png" /></td><td><p> <span class="GeneralProduct 3">Product 3</span> Release Notes</p></td></tr></tbody></table></a> </div>
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-3.png" /></td><td><p> <span class="GeneralProduct 3">Product 3</span> System Requirements</p></td></tr></tbody></table> </a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="home-section no-border">
-                                                <h1>Frequently Asked Questions</h1>
-                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Does <span class="GeneralProduct 1">Product 1</span>  Run on Windows only?</a></span>
-                                                    <div class="MCDropDownBody dropDownBody">
-                                                        <p>Curabitur vestibulum aliquam leo. Donec venenatis vulputate lorem. Fusce convallis metus</p>
+                                                <div class="home-section">
+                                                    <h1>System Requirements</h1>
+                                                    <div class="article-tiles">
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 66px;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p><span class="GeneralProduct 1">Product 1</span></p></td></tr></tbody></table></a>
+                                                        </div>
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 2">Product 2</span></p></td></tr></tbody></table></a>
+                                                        </div>
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 3">Product 3</span></p></td></tr></tbody></table></a>
+                                                        </div>
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-1.png" /></td><td><p><span class="GeneralProduct 4">Product 4</span> </p></td></tr></tbody></table></a>
+                                                        </div>
+                                                        <div><a class="home-button" href="System_Requirements.htm"><table style="width: 100%;"><col style="width: 35%;" /><col style="width: 65%;" /><tbody><tr><td><img src="Resources/Images/Home/Product-2.png" /></td><td><p><span class="GeneralProduct 5">Product 5</span></p></td></tr></tbody></table></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Do I Need a 64-Bit Machine to Run <span class="GeneralProduct 1">Product 1</span>?</a></span>
-                                                    <div class="MCDropDownBody dropDownBody">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                                <div class="home-section no-border">
+                                                    <h1>Frequently Asked Questions</h1>
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Does <span class="GeneralProduct 1">Product 1</span>  Run on Windows only?</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Curabitur vestibulum aliquam leo. Donec venenatis vulputate lorem. Fusce convallis metus</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Do I Need a 64-Bit Machine to Run <span class="GeneralProduct 1">Product 1</span>?</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -189,10 +228,9 @@
                                 </div>
                             </div>
                         </div>
-                    </section><a data-close="true"></a>
+                    </div><a data-close="true"></a>
                 </div>
             </div>
-            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
         </div>
     </body>
 </html>

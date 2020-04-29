@@ -67,7 +67,7 @@ input[type="search"]
 	background-position: center center;
 }
 
-.search-bar .search-filter.open
+.search-bar .search-filter-wrapper.open
 {
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -168,7 +168,6 @@ ul.menu.mc-component
 ul.menu a
 {
 	text-decoration: none;
-	outline: none;
 	color: #000;
 }
 
@@ -264,111 +263,8 @@ ul.menu li > a.selected
 	text-decoration: none;
 }
 
-._Skins_SearchResults.mc-component #resultList .glossary .term a:visited
-{
-	
-}
-
-._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:visited
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
-._Skins_SearchResults.mc-component #resultList h3.title a:visited
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
-._Skins_SearchResults.mc-component #resultList .glossary .term a:focus
-{
-	
-}
-
-._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:focus
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
-._Skins_SearchResults.mc-component #resultList h3.title a:focus
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
 #communityResultList a:hover
 {
-	text-decoration: underline;
-}
-
-#pagination a:hover
-{
-	border-top: solid 1px #e2e2e6;
-}
-
-._Skins_SearchResults.mc-component #resultList .glossary .term a:hover
-{
-	
-}
-
-._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:hover
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
-._Skins_SearchResults.mc-component #pagination a:hover
-{
-	border-top: solid 1px #e2e2e6;
-}
-
-._Skins_SearchResults.mc-component #resultList h3.title a:hover
-{
-	color: #000000;
-	text-decoration: underline;
-}
-
-ul.menu.mc-component li > a:hover
-{
-	background-color: #cacaca;
-}
-
-ul.menu.mc-component ul > li > a:hover
-{
-	background-color: #cacaca;
-}
-
-ul.menu.mc-component ul ul > li > a:hover
-{
-	background-color: #cacaca;
-}
-
-ul.menu.mc-component ul ul ul > li > a:hover
-{
-	background-color: #cacaca;
-}
-
-ul.menu.mc-component ul ul ul ul > li > a:hover
-{
-	background-color: #cacaca;
-}
-
-._Skins_SearchResults.mc-component #resultList .glossary .term a:active
-{
-	
-}
-
-._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:active
-{
-	color: #2200c1;
-	text-decoration: underline;
-}
-
-._Skins_SearchResults.mc-component #resultList h3.title a:active
-{
-	color: #2200c1;
 	text-decoration: underline;
 }
 
@@ -441,6 +337,11 @@ a.activityText:visited
 	border-top: solid 1px #e2e2e6;
 }
 
+#pagination a:hover
+{
+	border-top: solid 1px #e2e2e6;
+}
+
 .micro-content-container > .micro-content
 {
 	padding: 15px;
@@ -461,7 +362,10 @@ a.activityText:visited
 .micro-content-container > .micro-content > .micro-content-expand
 {
 	height: 40px;
+	width: 100%;
 	background: #ffffff url('../Images/arrow-down.png') no-repeat center center;
+	border-left: none;
+	border-right: none;
 	border-top: solid 1px #b9bec1;
 	border-bottom: solid 1px #b9bec1;
 	cursor: pointer;
@@ -844,6 +748,26 @@ a.activityText:visited
 	
 }
 
+._Skins_SearchResults.mc-component #resultList .glossary .term a:visited
+{
+	
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:focus
+{
+	
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:hover
+{
+	
+}
+
+._Skins_SearchResults.mc-component #resultList .glossary .term a:active
+{
+	
+}
+
 ._Skins_SearchResults.mc-component h1#results-heading
 {
 	color: #f08080;
@@ -903,11 +827,35 @@ a.activityText:visited
 	margin-bottom: 2px;
 }
 
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:focus
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:hover
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:active
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
 ._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-url cite
 {
 	color: #0e774a;
 	font-size: 0.9em;
 	font-style: normal;
+}
+
+._Skins_SearchResults.mc-component .micro-content-container > .micro-content > .micro-response-title a:visited
+{
+	color: #2200c1;
+	text-decoration: underline;
 }
 
 ._Skins_SearchResults.mc-component .micro-content-container > .micro-content
@@ -942,6 +890,11 @@ a.activityText:visited
 	text-decoration: none;
 }
 
+._Skins_SearchResults.mc-component #pagination a:hover
+{
+	border-top: solid 1px #e2e2e6;
+}
+
 ._Skins_SearchResults.mc-component #pagination a#selected
 {
 	font-weight: bold;
@@ -962,6 +915,30 @@ a.activityText:visited
 ._Skins_SearchResults.mc-component #resultList h3.title
 {
 	margin-bottom: 2px;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:visited
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:focus
+{
+	color: #2200c1;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:hover
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+._Skins_SearchResults.mc-component #resultList h3.title a:active
+{
+	color: #2200c1;
 	text-decoration: underline;
 }
 
@@ -1038,6 +1015,31 @@ ul.menu.mc-component li > a.selected
 {
 	font-weight: bold;
 	background-color: transparent;
+}
+
+ul.menu.mc-component li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul ul > li > a:hover
+{
+	background-color: #cacaca;
+}
+
+ul.menu.mc-component ul ul ul ul > li > a:hover
+{
+	background-color: #cacaca;
 }
 
 ul.menu.mc-component li > a.selected:hover

@@ -1,1 +1,1 @@
-define({'NewFilter':{c:'Release Notes', cm:'', o:0},})
+define({'Release':{c:'Release Notes', cm:'', o:1},'Test':{c:'Test', cm:'', o:0},})

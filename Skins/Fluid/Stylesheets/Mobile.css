@@ -342,7 +342,7 @@
 		background-color: #ffffff;
 	}
 
-	.search-bar .search-filter.open
+	.search-bar .search-filter-wrapper.open
 	{
 		background-color: #ffffff;
 	}
@@ -360,6 +360,11 @@
 	}
 
 	.search-filter-content ul li:hover
+	{
+		background-color: #ffffff;
+	}
+
+	.search-filter-content ul li button:focus
 	{
 		background-color: #ffffff;
 	}
@@ -394,6 +399,11 @@
 	{
 		background-repeat: no-repeat;
 		background-color: transparent;
+	}
+
+	.skip-to-content
+	{
+		background-color: #ffffff;
 	}
 }
 
